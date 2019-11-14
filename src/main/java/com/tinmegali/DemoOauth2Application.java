@@ -54,6 +54,7 @@ public class DemoOauth2Application {
 							if ( username.equals("admin") )
 								acct.grantAuthority("ROLE_ADMIN");
 							try {
+                                                            System.out.println("user : "+acct.getUsername()+" pw: "+acct.getPassword());
 								accountService.register(acct);
 							} catch (AccountException e) {
 								e.printStackTrace();
